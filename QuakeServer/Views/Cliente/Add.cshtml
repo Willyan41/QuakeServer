@@ -1,0 +1,29 @@
+﻿@model ClienteViewModel
+
+<form asp-controller="Cliente" asp-action="Add" method="post" class="pure-form pure-form-aligned">
+    <fieldset>
+        <div class="pure-control-group">
+            <label asp-for="NickName">NickName</label>
+            <input asp-for="NickName" required class="pure-input-2-3" />
+        </div>
+
+        <div class="pure-control-group">
+            <label asp-for="Personagem">Personagem</label>
+            <input asp-for="Personagem" required class="pure-input-2-3" />
+        </div>
+
+        <div class="pure-control-group">
+            <label asp-for="Matou">Matou</label>
+            <input type="Matou" asp-for="Matou" required class="pure-input-2-3" />
+        </div>
+
+        <div class="pure-control-group">
+            <label asp-for="Morreu">Morreu</label>
+            <input type="Morreu" asp-for="Morreu" required class="pure-input-2-3" />
+        </div>
+
+        <div class="pure-controls">
+            <input type="submit" value="Salvar" class="pure-button pure-button-primary" />
+        </div>
+    </fieldset>
+</form>

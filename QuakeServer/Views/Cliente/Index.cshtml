@@ -1,0 +1,52 @@
+﻿@model ClienteViewModel
+
+@{
+    ViewData["Title"] = "Cliente";
+}
+
+<h2>Área do Cliente</h2>
+
+<div id="add-Cliente">
+    @Html.Partial("Add", Model)
+</div>*
+
+<div class="table-responsive">
+    @if (Model.Clientes.Any())
+    {
+        <table class="pure-table pure-table-bordered">
+            <thead>
+                <tr>
+                    <th>IdPosicao</th>
+                    <th>NickName</th>
+                    <th>Personagem</th>
+                    <th>Personagem_Alterado</th>
+                    <th>Vida</th>
+                    <th>Escudo</th>
+                    <th>Matou</th>
+                    <th>Morreu</th>
+                </tr>
+            </thead>
+            <tbody>
+                @if (Model.Clientes.Any())
+                {
+                    foreach (var p in Model.Clientes)
+                    {
+                <tr>
+                    <td>@p.IdPosicao</td>
+                    <td>@p.NickName</td>
+                    <td>@p.Personagem</td>
+                    <td>@p.Personagem_Alterado</td>
+                    <td>@p.Vida</td>
+                    <td>@p.Escudo</td>
+                    <td>@p.Matou</td>
+                    <td>@p.Morreu</td>
+                                        <td>
+                        <a data-ajax="true" data-ajax-method="GET" data-ajax-mode="replace" data-ajax-update="#add-Cliente" href='@Url.Action("Add", "Cliente", new { Id = p.Id })'><i class="material-icons">build</i></a>
+                    </td>
+                </tr>
+                    }
+                }
+            </tbody>
+        </table>
+    }
+</div>
