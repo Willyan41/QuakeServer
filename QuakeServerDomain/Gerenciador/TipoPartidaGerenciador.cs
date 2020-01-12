@@ -6,22 +6,23 @@ using System.Text;
 
 namespace QuakeServerDomain.Gerenciador
 {
-    public class PartidaGerenciador : BaseGerenciador
+    public class TipoPartidaGerenciador : BaseGerenciador
     {
-        public PartidaGerenciador()
+
+        public TipoPartidaGerenciador()
         {
             _context = new Context.QuakeContext();
         }
 
-        public void Add(Partida partida)
+        public void Add(TipoPartida tipoPartida)
         {
             try
             {
-                if (partida != null)
+                if (tipoPartida != null)
                 {
-                    if (partida.Id == 0)
+                    if (tipoPartida.Id == 0)
                     {
-                        _context.Add(partida);
+                        _context.Add(tipoPartida);
                         _context.SaveChanges();
                     }
                 }
@@ -29,35 +30,29 @@ namespace QuakeServerDomain.Gerenciador
             catch (Exception ex)
             {
                 throw new Exception(ex.Message);
-
             }
         }
 
-        public Partida RecuperarPorId(int id)
+        public TipoPartida RecuperarPorId(int id)
         {
-            return _context.Partida.Find(id);
+            return _context.TipoPartida.Find(id);
         }
 
-        public IQueryable<Partida> RecuperarPartida()
+        public IQueryable<TipoPartida> RecuperarTipoPartida()
         {
-            return _context.Partida.Select(c => new Partida()
+            return _context.TipoPartida.Select(c => new TipoPartida()
             {
-                Id              = c.Id,
-                Cliente         = c.Cliente,
-                NMaxJogadores   = c.NMaxJogadores,
-                ScoreCliente    = c.ScoreCliente,
-                Tipo            = c.Tipo,
-                TotalMortes     = c.TotalMortes,
+                Id      = c.Id,
+                Tipo    = c.Tipo,
             });
         }
-
-        public void Delete(Partida partida)
+        public void Delete(TipoPartida tipoPartida)
         {
             try
             {
-                if (partida != null)
+                if (tipoPartida != null)
                 {
-                    _context.Remove(partida);
+                    _context.Remove(tipoPartida);
                     _context.SaveChanges();
                 }
             }
