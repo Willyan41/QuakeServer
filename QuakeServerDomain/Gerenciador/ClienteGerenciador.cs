@@ -42,7 +42,7 @@ namespace QuakeServerDomain.Gerenciador
         public IQueryable<Cliente> RecuperarCliente()
         {
 
-            return _context.Cliente.Select(c => new Cliente()
+            return _context.Cliente.Select(c => new Cliente
             {
                 Id                  = c.Id,
                 IdPosicao           = c.IdPosicao,

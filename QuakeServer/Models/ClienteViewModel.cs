@@ -24,5 +24,9 @@ namespace QuakeServer.Models
         public int Matou { get; set; }
 
         public int Morreu { get; set; }
+
+
+        public IQueryable<ClienteViewModel> Clientes { get; set; }
+
     }
 }
