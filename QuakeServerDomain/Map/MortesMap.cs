@@ -11,7 +11,7 @@ namespace QuakeServerDomain.Map
     {
         public void Configure(EntityTypeBuilder<Mortes> builder)
         {
-            builder.ToTable("BS_006_MORTES");
+            builder.ToTable("BS_005_MORTES");
 
             builder.HasKey(k => k.Id);
 
@@ -21,6 +21,9 @@ namespace QuakeServerDomain.Map
             builder.Property(p => p.IdClienteMatou)
                 .HasColumnName("ID_CLIENTE_MATOU");
 
+            builder.Property(p => p.Cliente_Matou)
+                .HasColumnName("CLIENTE_MATOU");
+            
             builder.Property(p => p.IdArma)
                 .HasColumnName("ID_ARMA");
 
@@ -29,6 +32,9 @@ namespace QuakeServerDomain.Map
 
             builder.Property(p => p.IdClienteMorto)
                 .HasColumnName("ID_CLIENTE_MORTO");
+
+            builder.Property(p => p.Cliente_Morto)
+                .HasColumnName("CLIENTE_MORTO");
 
             builder.Property(p => p.IdPartida)
                 .HasColumnName("ID_PARTIDA");

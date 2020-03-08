@@ -12,7 +12,7 @@ namespace QuakeServerDomain.Map
 
         public void Configure(EntityTypeBuilder<Armas> builder)
         {
-            builder.ToTable("BS_002_ARMAS");
+            builder.ToTable("BS_001_ARMAS");
 
             builder.HasKey(k => k.Id);
 
@@ -23,7 +23,7 @@ namespace QuakeServerDomain.Map
                 .HasColumnName("NOME_ARMA");
 
             builder.Property(p => p.Municao)
-                .HasColumnName("MUNICAO");
+                .HasColumnName("MUNICAO_MAX");
 
             builder.Property(p => p.Dano)
                 .HasColumnName("DANO");

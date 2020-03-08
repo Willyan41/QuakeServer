@@ -35,6 +35,8 @@ namespace QuakeServerDomain.Map
             builder.Property(p => p.ScoreCliente)
                 .HasColumnName("SCORE_CLIENTE");
 
+            builder.Property(p=> p.NPartida)
+                .HasColumnName("N_PARTIDA");
         }
 
     }

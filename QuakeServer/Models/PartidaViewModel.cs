@@ -18,5 +18,7 @@ namespace QuakeServer.Models
         public int TotalMortes { get; set; }
 
         public int ScoreCliente { get; set; }
+
+        public int NPartida { get; set; }
     }
 }

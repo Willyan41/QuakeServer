@@ -16,6 +16,8 @@ namespace QuakeServerDomain.Entidade
 
         public int ScoreCliente { get; set; }
 
+        public int NPartida { get; set; }
+
                               
     }
 }

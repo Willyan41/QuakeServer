@@ -31,19 +31,19 @@
                 {
                     foreach (var p in Model.Clientes)
                     {
-                <tr>
-                    <td>@p.IdPosicao</td>
-                    <td>@p.NickName</td>
-                    <td>@p.Personagem</td>
-                    <td>@p.Personagem_Alterado</td>
-                    <td>@p.Vida</td>
-                    <td>@p.Escudo</td>
-                    <td>@p.Matou</td>
-                    <td>@p.Morreu</td>
-                                        <td>
-                        <a data-ajax="true" data-ajax-method="GET" data-ajax-mode="replace" data-ajax-update="#add-Cliente" href='@Url.Action("Add", "Cliente", new { Id = p.Id })'><i class="material-icons">build</i></a>
-                    </td>
-                </tr>
+                        <tr>
+                            <td>@p.IdPosicao</td>
+                            <td>@p.NickName</td>
+                            <td>@p.Personagem</td>
+                            <td>@p.Personagem_Alterado</td>
+                            <td>@p.Vida</td>
+                            <td>@p.Escudo</td>
+                            <td>@p.Matou</td>
+                            <td>@p.Morreu</td>
+                            <td>
+                                <a data-ajax="true" data-ajax-method="GET" data-ajax-mode="replace" data-ajax-update="#add-Cliente" href='@Url.Action("Add", "Cliente", new { Id = p.Id })'><i class="material-icons">build</i></a>
+                            </td>
+                        </tr>
                     }
                 }
             </tbody>

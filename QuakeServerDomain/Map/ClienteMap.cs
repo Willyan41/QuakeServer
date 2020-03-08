@@ -11,7 +11,7 @@ namespace QuakeServerDomain.Map
     {
         public void Configure(EntityTypeBuilder<Cliente> builder)
         {
-            builder.ToTable("BS_001_CLIENTE");
+            builder.ToTable("BS_003_CLIENTE");
 
             builder.HasKey(k => k.Id);
 
